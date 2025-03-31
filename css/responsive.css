@@ -1,0 +1,385 @@
+/**
+ * responsive.css
+ * Contains responsive design styles for the Davis Professional Firefighters website
+ * Mobile-first approach with breakpoints at 480px, 768px, 1024px, and 1440px
+ */
+
+/* Base Mobile Styles (Default)
+   These styles apply to all devices by default
+   ========================================================================== */
+
+body {
+    padding-top: 70px; /* Account for fixed header */
+}
+
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+h1 {
+    font-size: var(--font-size-2xl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+}
+
+.hero {
+    padding: var(--spacing-xl) 0;
+}
+
+.hero .container {
+    flex-direction: column;
+}
+
+.hero-content, 
+.hero-image {
+    width: 100%;
+    text-align: center;
+}
+
+.hero .subtitle {
+    font-size: var(--font-size-xl);
+}
+
+.hero .description {
+    font-size: var(--font-size-base);
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.events-slider {
+    padding-bottom: var(--spacing-md);
+}
+
+.about-brief .container {
+    flex-direction: column;
+}
+
+.about-content, 
+.about-image {
+    width: 100%;
+    text-align: center;
+}
+
+.about-image {
+    margin-top: var(--spacing-lg);
+}
+
+.leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.contact-container {
+    flex-direction: column;
+}
+
+.contact-info {
+    margin-top: var(--spacing-xl);
+}
+
+.portal-container {
+    flex-direction: column;
+}
+
+.portal-info {
+    margin-top: var(--spacing-xl);
+}
+
+.annual-event-card {
+    flex-direction: column;
+}
+
+.annual-event-image {
+    width: 100%;
+    height: 200px;
+}
+
+.honor-guard-content {
+    flex-direction: column;
+}
+
+.honor-guard-image {
+    margin-top: var(--spacing-lg);
+}
+
+.footer-content {
+    flex-direction: column;
+}
+
+.footer-logo, 
+.footer-links, 
+.footer-events, 
+.footer-social {
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: block;
+}
+
+.nav-list {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-md);
+    flex-direction: column;
+    padding: var(--spacing-md) 0;
+    display: none;
+    z-index: var(--z-index-dropdown);
+}
+
+.nav-list.active {
+    display: flex;
+}
+
+.nav-list li {
+    width: 100%;
+    margin: 0;
+}
+
+.nav-list a {
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu {
+    display: none;
+}
+
+.dropdown.active .submenu {
+    display: block;
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu li a {
+    padding-left: var(--spacing-xl);
+}
+
+/* Small devices (480px and up)
+   ========================================================================== */
+@media (min-width: 480px) {
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .hero .subtitle {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero .description {
+        font-size: var(--font-size-md);
+    }
+}
+
+/* Medium devices (tablets, 768px and up)
+   ========================================================================== */
+@media (min-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero {
+        padding: var(--spacing-2xl) 0 var(--spacing-2xl);
+    }
+    
+    .hero .container {
+        flex-direction: row;
+    }
+    
+    .hero-content, 
+    .hero-image {
+        width: 50%;
+        text-align: left;
+    }
+    
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    
+    .about-brief .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .about-content, 
+    .about-image {
+        width: 50%;
+        text-align: left;
+    }
+    
+    .about-image {
+        margin-top: 0;
+    }
+    
+    .leadership-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-container {
+        flex-direction: row;
+    }
+    
+    .contact-info {
+        margin-top: 0;
+    }
+    
+    .portal-container {
+        flex-direction: row;
+    }
+    
+    .portal-info {
+        margin-top: 0;
+    }
+    
+    .annual-event-card {
+        flex-direction: row;
+    }
+    
+    .annual-event-image {
+        width: auto;
+        height: auto;
+    }
+    
+    .honor-guard-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .honor-guard-image {
+        margin-top: 0;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+    }
+    
+    .footer-logo, 
+    .footer-links, 
+    .footer-events, 
+    .footer-social {
+        width: 25%;
+    }
+}
+
+/* Large devices (desktops, 1024px and up)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    body {
+        padding-top: 90px;
+    }
+    
+    section {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    h1 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero {
+        padding: calc(var(--spacing-3xl) * 1.5) 0 var(--spacing-3xl);
+    }
+    
+    .hero .subtitle {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .hero .description {
+        font-size: var(--font-size-lg);
+    }
+    
+    .leadership-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Desktop Navigation */
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-list {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+    }
+    
+    .nav-list li {
+        width: auto;
+    }
+    
+    .dropdown:hover .submenu,
+    .dropdown:focus-within .submenu {
+        display: block;
+    }
+    
+    .submenu {
+        position: absolute;
+        width: 200px;
+    }
+    
+    .submenu li a {
+        padding-left: var(--spacing-md);
+    }
+}
+
+/* Extra large devices (large desktops, 1440px and up)
+   ========================================================================== */
+@media (min-width: 1440px) {
+    .hero {
+        padding: calc(var(--spacing-3xl) * 2) 0 var(--spacing-3xl);
+    }
+    
+    .container {
+        max-width: var(--container-xl);
+    }
+    
+    .leadership-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+} 
